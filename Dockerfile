@@ -1,6 +1,5 @@
-# Pull base image 
-From tomcat:8-jre8 
+FROM tomcat:9-jre17-temurin
 
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+LABEL maintainer="valaxytech@gmail.com"
+
+COPY webapp/target/webapp.war /usr/local/tomcat/webapps/
